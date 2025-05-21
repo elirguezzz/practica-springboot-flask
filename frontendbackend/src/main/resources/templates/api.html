@@ -1,0 +1,37 @@
+<!-- Indica que el documento es HTML5 -->
+<!DOCTYPE html>
+<!-- Espacio de nombres XML de Thymeleaf para usar atributos como th:action, th:text, etc. -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulación de API</title>
+
+  <!-- Enlace a una hoja de estilos CSS ubicada en src/main/resources/static/style.css -->
+  <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<!-- Título principal de la página -->
+<h1>Simulación de llamada a API Flask</h1>
+
+<!-- Formulario que envía una solicitud POST a la ruta /api-call del backend -->
+<form th:action="@{/api-call}" method="post">
+  <!-- Campo de entrada para el parámetro que se enviará a la API -->
+  <label for="parametro">Parámetro:</label>
+  <input type="text" id="parametro" name="parametro" required>
+
+  <!-- Botón para enviar el formulario -->
+  <button type="submit">Llamar API</button>
+</form>
+
+<!-- Muestra la respuesta de la API si existe una variable 'respuesta' en el modelo -->
+<p th:if="${respuesta != null}">
+  <strong>Respuesta del API:</strong>
+  <span th:text="${respuesta}"></span>
+</p>
+
+<!-- Enlace para volver a la página de inicio (index.html) -->
+<p><a th:href="@{/}">Volver a inicio</a></p>
+
+</body>
+</html>
