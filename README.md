@@ -1,5 +1,8 @@
 # Sistema Spring Boot + Flask – Práctica Obligatoria 2
 
+Curso: Sistemas Distribuidos 2024-2025
+Autor: Elisa Rodríguez Domínguez
+
 Este proyecto consiste en el desarrollo de un sistema completo que combina:
 
 - 🧩 **Frontend y Backend con Spring Boot**
